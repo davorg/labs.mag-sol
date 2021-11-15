@@ -5,8 +5,6 @@ function resizeIframe() {
   var frame  = document.getElementById('gateway');
   var width  = frame.width;
   var height = frame.height;
-  console.log(frame);
-  console.log(width + 'x' + height);
   if (window.innerWidth > window.innerHeight) {
     frame.src    = landscape;
     frame.width  = Math.max(width, height);
