@@ -9,19 +9,30 @@
 var portrait  = '/nuj/portrait.html';
 var landscape = '/nuj/landscape.html';
 
-window.onload = function() {
-  var frame = document.getElementById('gateway');
+function resizeIframe() {
+  var frame  = document.getElementById('gateway');
+  var width  = frame.width;
+  var height = frame.height;
+  console.log(frame);
+  console.log(width + 'x' + height);
   if (window.innerWidth > window.innerHeight) {
-    frame.src = landscape;
+    frame.src    = landscape;
+    frame.width  = Math.max(width, height);
+    frame.height = Math.min(width, height);
   } else {
     frame.src = portrait;
+    frame.width  = Math.min(width, height);
+    frame.height = Math.max(width, height);
   }
 }
+
+window.onload   = resizeIframe;
+window.onresize = resizeIframe;
     </script>
     <h1>Main Index</h1>
     <p>This is the main index page.</p>
     <p>It loads the gateway in an &lt;iframe></p>
-    <iframe id="gateway" src="/nuj/gateway.html">
+    <iframe id="gateway" width="560" height="315" src="/nuj/gateway.html">
   </body>
 
 </html>
