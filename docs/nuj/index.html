@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Index</title>
+  </head>
+
+  <body>
+    <script>
+var portrait  = '/nuj/portrait.html';
+var landscape = '/nuj/landscape.html';
+
+window.onload = function() {
+  var frame = document.getElementById('gateway');
+  if (window.innerWidth > window.innerHeight) {
+    frame.src = landscape;
+  } else {
+    frame.src = portrait;
+  }
+}
+    </script>
+    <h1>Main Index</h1>
+    <p>This is the main index page.</p>
+    <p>It loads the gateway in an &lt;iframe></p>
+    <iframe id="gateway" src="/nuj/gateway.html">
+  </body>
+
+</html>
