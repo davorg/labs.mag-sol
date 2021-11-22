@@ -1,5 +1,5 @@
-var portrait  = '/nuj/portrait.html';
-var landscape = '/nuj/landscape.html';
+var portrait  = '/nuj/portrait/story.html';
+var landscape = '/nuj/landscape/story.html';
 
 function resizeIframe() {
   var frame  = document.getElementById('gateway');
