@@ -37,7 +37,31 @@
           <div class="col-lg-8">
             <h2>About this page</h2>
             <p class="lead">Resize your browser window to see the content in the iframe below switch between portrait and landscape.</p>
-            <iframe id="gateway" width="560" height="315" src="/nuj/gateway.html"></iframe>
+<!-- CUT HERE -->
+            <script>
+var portrait  = 'https://nujstorysmart.com/portrait/story.html';
+var landscape = 'https://nujstorysmart.com/landscape/story.html';
+
+function resizeIframe() {
+  var frame  = document.getElementById('gateway');
+  var width  = frame.width;
+  var height = frame.height;
+  if (window.innerWidth > window.innerHeight) {
+    frame.src    = landscape;
+    frame.width  = Math.max(width, height);
+    frame.height = Math.min(width, height);
+  } else {
+    frame.src = portrait;
+    frame.width  = Math.min(width, height);
+    frame.height = Math.max(width, height);
+  }
+}
+
+window.onload   = resizeIframe;
+window.onresize = resizeIframe;
+            </script>
+            <iframe id="gateway" width="560" height="315" src="https://nujstorysmart.com/landscape/story.html"></iframe>
+<!-- END CUT HERE -->
           </div>
         </div>
       </div>
@@ -46,6 +70,5 @@
     <footer class="py-3 bg-dark">
       <div class="container"><p class="text-white">Copyright &copy; Magnum Solutions Ltd. 2021</p></div>
     </footer>
-    <script src="js/switch.js"></script>
   </body>
 </html>
