@@ -1,5 +1,5 @@
-var portrait  = '/nuj/portrait/story.html';
-var landscape = '/nuj/landscape/story.html';
+var portrait  = 'https://nujstorysmart.com/portrait/story.html';
+var landscape = 'https://nujstorysmart.com/landscape/story.html';
 
 function resizeIframe() {
   var frame  = document.getElementById('gateway');
