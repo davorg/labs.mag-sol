@@ -1,3 +1,3 @@
-# labs.mag-sol.com
+# labs.davecross.co.uk
 
-Magnum labs
+Dave Cross labs
